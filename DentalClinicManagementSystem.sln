@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DentalClinicManagementSystem", "DentalClinicManagementSystem\DentalClinicManagementSystem.csproj", "{1F8E0A01-2B4D-4B9A-91D1-2B380AD14277}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DentalClinicManagementSystem.Tests", "DentalClinicManagementSystem.Tests\DentalClinicManagementSystem.Tests.csproj", "{82964F80-9BBD-48BE-9FA0-F5B26228DB0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F8E0A01-2B4D-4B9A-91D1-2B380AD14277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F8E0A01-2B4D-4B9A-91D1-2B380AD14277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F8E0A01-2B4D-4B9A-91D1-2B380AD14277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F8E0A01-2B4D-4B9A-91D1-2B380AD14277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82964F80-9BBD-48BE-9FA0-F5B26228DB0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82964F80-9BBD-48BE-9FA0-F5B26228DB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82964F80-9BBD-48BE-9FA0-F5B26228DB0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82964F80-9BBD-48BE-9FA0-F5B26228DB0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22403314-B00C-4A0F-8595-A19CA431DC57}
+	EndGlobalSection
+EndGlobal

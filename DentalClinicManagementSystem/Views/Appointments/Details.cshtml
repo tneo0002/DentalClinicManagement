@@ -1,0 +1,75 @@
+﻿@model DentalClinicManagementSystem.Models.Appointment
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Appointment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Dentist.DentistName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dentist.DentistName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppointmentDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppointmentDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppointmentFname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppointmentFname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppointmentLname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppointmentLname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppointmentCreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppointmentCreatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppointmentPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppointmentPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppointmentEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppointmentEmail)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AppointmentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,128 @@
+﻿@model IEnumerable<DentalClinicManagementSystem.Models.Patient>
+
+@if (User.Identity.IsAuthenticated)
+{
+    if (User.IsInRole("Admin") || User.IsInRole("Dentist"))
+    {
+        {
+            ViewBag.Title = "Patient Profile";
+            Layout = "~/Views/Shared/_Layout.cshtml";
+
+        }
+
+        <h2>Patient Profile</h2>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PatientFname)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PatientLname)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PatientAddress)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PatientPhone)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PatientEmail)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PatientFname)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PatientLname)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PatientAddress)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PatientPhone)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PatientEmail)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+
+        </table>
+        @section Scripts {
+            @Scripts.Render("~/Scripts/DataTables/jquery.dataTables.js")
+            @Scripts.Render("~/Scripts/DataTables/dataTables.bootstrap.js")
+            <script>
+                $(document).ready(function () {
+                    $('.table').DataTable();
+                });
+            </script>
+        }
+        <link href="~/Content/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    }
+    else
+    {
+        {
+            ViewBag.Title = "Profile";
+            Layout = "~/Views/Shared/_Layout.cshtml";
+        }
+
+        <h2>Profile</h2>
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientFname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientLname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatientEmail)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PatientFname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PatientLname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PatientAddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PatientPhone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PatientEmail)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.PatientId })
+                    </td>
+                </tr>
+            }
+
+
+        </table>
+    }
+}

@@ -1,0 +1,59 @@
+﻿@model DentalClinicManagementSystem.Models.Patient
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Patient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientFname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientFname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientLname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientLname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientEmail)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PatientId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
