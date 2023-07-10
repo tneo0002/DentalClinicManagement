@@ -10,9 +10,9 @@ namespace DentalClinicManagementSystem.Utils
 {
     public class SmsSender
     {
-        private const String accountSid = "AC1eeb80b8e0dce51f0957c4638a9f595d";
-        private const String authToken = "1cf3d846b21f83136fdd177c10fbafcc";
-        private const String twilioPhone = "+19498065098";
+        private const String accountSid = "accountSid";
+        private const String authToken = "authToken";
+        private const String twilioPhone = "twilioPhone";
 
         public void Send(String toPhone, String contents)
         {
