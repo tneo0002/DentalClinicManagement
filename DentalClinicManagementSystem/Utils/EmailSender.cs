@@ -10,7 +10,7 @@ namespace DentalClinicManagementSystem.Utils
 {
     public class EmailSender
     {
-        private const String API_KEY = "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";
+        private const String API_KEY = "API_KEY";
 
         public void Send(String toEmail, String subject, String contents)
         {
